@@ -1,14 +1,8 @@
-% week 1
+% Week 1 Problem 2
+% show cond(A) in Example 1.1.2 , 1.1.20 and 1.1.1
 % cheng yu ge
 % 12307110079
 
-%% show lim(x->0) (1-cos(x))/x^2
-x = linspace(0,0.01,10e4);
-y = abs((1-cos(x)) ./ (x.^2) - 0.5);
-loglog(x, y);
-legend('y = abs((1-cos(x)) / x^2 - 0.5)','Location', 'North');
-
-%% show cond(A) in Example 1.1.2 , 1.1.20 and 1.1.1
 cond1 = zeros(1,100);
 cond2 = zeros(1,100);
 cond3 = zeros(1,100);
@@ -23,6 +17,6 @@ end
 semilogy(1:100, cond1,'*');hold on;
 semilogy(1:100, cond2,'*');
 semilogy(1:100, cond3,'*');
-legend('cond(A1(n))', 'cond(A2(n))', 'cond(A3(n))');
-
-%%
+h = legend('cond(A1(n))', 'cond(A2(n))', 'cond(A3(n))', 'Location', 'East');
+set(h,'Fontsize', 22);
+set(gca,'Fontsize', 16);
