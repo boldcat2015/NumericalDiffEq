@@ -13,3 +13,14 @@ for i = E
     end
 end
 disp( horzcat( Exact' , T ) );
+
+% show error
+figure ;
+hold on ;
+for i = 1 : 5
+    plot ( E , abs(T(:,i)' - Exact) );
+end
+h = legend('1 point','2 points','3 points','4 points','5 points')
+axis([1,7,-0.01,0.14]);
+set(h,'Fontsize',22);
+title('error of 1-5 point(s) Gauss integral formula');

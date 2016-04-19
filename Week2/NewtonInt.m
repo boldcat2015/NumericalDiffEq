@@ -23,3 +23,12 @@ T = horzcat  (   Exact' , ...
     Rule38     (F,0,1)' , ...
     Cotes      (F,0,1)' ) ;
 disp(T);
+
+% show error
+figure ; 
+hold on ;
+for i = 2 : 6
+    plot ( E , abs(T(:,i)' - T(:,1)') );
+end
+h = legend('Midpoint','Trapezoidal','Simpson','Rule3/8','Cotes');
+set(h,'Fontsize',22);
