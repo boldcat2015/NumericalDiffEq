@@ -1,0 +1,32 @@
+\documentclass{homework}
+\usepackage{homework}
+\usepackage{hanhua}
+\title{Week 8}
+\date{}
+\begin{document}
+\maketitle
+\section{（P136/1）}
+说明极值原理中$c(x)$为负时，极值原理可能不成立。考虑一维的Helmholtz方程，找$u$满足$$\frac{\diff ^2u}{\diff x^2}+k^2u=1,~u(0)=u(1)=0.$$
+\section{（P136/3）}
+设$u(0)=u(1)=0$且满足$-\frac{\diff ^2u}{\diff x^2}=f(x).$利用Green函数表达式
+\begin{eqnarray*}
+G(x)=
+\begin{dcases}
+(1-x_0)x, &0<x<x_0,\cr x_0(1-x), &x_0<x<1.
+\end{dcases}
+\end{eqnarray*}
+证明$$u(x)=\int_0^1G(x;x_0)f(x_0)\diff x_0.$$
+\section{解：}
+$$-\frac{\diff ^2u}{\diff x^2}=\delta(x-x_0),~G(0)=0,~G'(1)=0.$$
+\section{（P143/3改）}
+对方程$$-a\frac{\diff ^2u}{\diff x^2}+b\frac{\diff u}{\diff x}+cu=1,$$如果边界条件改为$u(1)=0,\frac{\diff u}{\diff x}(0)+u(0)=0,$求其精确解；并用三点差分格式离散求解，同时分析差分格式的精度。
+\section{用三点差分格式解：}
+\begin{eqnarray*}
+\begin{dcases}
+-\frac{\diff^2u}{\diff x^2}+u=f,&~x\in(0,1)\cr u(0)=\alpha,~u(1)=\beta.
+\end{dcases}
+\end{eqnarray*}
+其中$f,\alpha,\beta$由$u=\cos x$得到。即$f=2\cos x,~u(0)=1,~u(1)=\cos 1.$
+\section{（P151/2）}
+证明不等式$\bignorm{\bf e}_{\ell^2}\leqslant\bignorm{\delta^+_x{\bf e}}_{\ell^2},$并用它来证明当$c(x)=0$时，下述方程三点差分格式的收敛性：$$-\frac{\diff^2u}{\diff x^2}+u=f(x),~u(0)=u(1)=0.$$且三点差分格式函数值和导数值都是两阶收敛的。
+\end{document}

@@ -5,7 +5,12 @@
 \begin{document}
 \maketitle
 \section{将A-B，A-M，Gear格式用Newton表示法表示}
-
+（k步格式）
+\subsection{Adams-Moulton}
+设：$$\int_{t_n}^{t_{n+1}}f(t)\diff t=\int_{t_n}^{t_{n+1}}I_k(f)\diff t=\sum_{j=0}^kc_j\nabla^jf_{n+1}$$其中$I_k(f)$为$f$在$x_{n+1},x_n,x_{n-1},\cdots,x_{n+1-k}$上的插值多项式，则有
+\subsection{Adams-Bashforth}
+\subsection{Gear}
+$$\sum_{j=1}^k\frac{1}{j}\nabla^ju_{n+1}=\Delta tf_{n+1}$$
 \section{构造例子，观察误差指数增长、多项式增长（P102/2）}
 
 \end{document}
